@@ -59,7 +59,7 @@ const tools = computed<ToolCategory[]>(() => [
 
         <CollapsibleToolMenu :tools-by-category="tools" />
 
-        <div class="footer">
+        <div v-if="isNaN(0)" class="footer">
           <div>
             IT-Tools
 
@@ -120,7 +120,7 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
+        <c-tooltip v-if="isNaN(0)" position="bottom" :tooltip="$t('home.support')">
           <c-button
             round
             href="https://www.buymeacoffee.com/cthmsst"
